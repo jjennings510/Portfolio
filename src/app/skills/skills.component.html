@@ -1,0 +1,47 @@
+<section id="skills">
+  <div class="container">
+    <h2><strong>Skills</strong></h2>
+    <span class="bar-title"></span>
+    <div class="row mt-2">
+      <div class="col-lg-4" data-aos="zoom-in-right" data-aos-delay="300">
+        <h5 class="mb-4"><strong>Languages</strong></h5>
+        <div class="row" *ngFor="let language of skills.languages">
+          <span>{{ language.name }}</span>
+          <div class="mb-2">
+            <progressbar [value]="language.percent" [max]="100"
+              ><b class="text-end me-2">{{ language.percent }}%</b></progressbar
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="zoom-in-left" data-aos-delay="300">
+        <h5 class="mb-4"><strong>Frameworks and Libraries</strong></h5>
+        <div>
+          <div class="row" *ngFor="let framework of skills.frameworks">
+            <span>{{ framework.name }}</span>
+            <div class="mb-2">
+              <progressbar [value]="framework.percent" [max]="100"
+                ><b class="text-end me-2"
+                  >{{ framework.percent }}%</b
+                ></progressbar
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="zoom-in-right" data-aos-delay="300">
+        <h5 class="mb-4"><strong>Tools</strong></h5>
+        <div>
+          <div class="row" *ngFor="let tool of skills.tools">
+            <span>{{ tool.name }}</span>
+            <div class="mb-2">
+              <progressbar [value]="tool.percent" [max]="100"
+                ><b class="text-end me-2">{{ tool.percent }}%</b></progressbar
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
