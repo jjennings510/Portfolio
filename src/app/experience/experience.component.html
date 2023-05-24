@@ -1,0 +1,55 @@
+<section id="experience">
+  <div class="container">
+    <h2><strong>Experience</strong></h2>
+    <span class="bar-title"></span>
+    <div class="row mt-2">
+      <h5>Work Experience</h5>
+      <ul>
+        <li *ngFor="let work of works">
+          <h6>{{ work.position }}</h6>
+          <em>{{ work.employer }}</em>
+          <p>{{ work.date }}</p>
+          <button
+            class="btn btn-primary"
+            (click)="toggleDetails(work)"
+            [attr.aria-expanded]="!work.displayDetails"
+            aria-controls="workDetails"
+          >
+            Details
+          </button>
+          <div id="workDettails" [collapse]="!work.displayDetails" [isAnimated]="true">
+            <span *ngFor="let detail of work.details">
+                <ul>
+                  <li>{{ detail }}</li>
+                </ul>
+              </span>
+          </div>
+        </li>
+      </ul>
+      <h5>Education</h5>
+      <ul>
+        <li *ngFor="let education of educations">
+            <h6><strong>{{education.degree}}</strong></h6>
+            <em>{{education.school}} - {{education.location}}</em>
+            <p>{{education.date}}</p>
+            <button
+            class="btn btn-primary"
+            (click)="toggleDetails(education)"
+            [attr.aria-expanded]="!education.displayDetails"
+            aria-controls="workDetails"
+          >
+            Relevant Coursework
+          </button>
+          <div id="workDettails" [collapse]="!education.displayDetails" [isAnimated]="true">
+            <span *ngFor="let course of education.coursework">
+                <ul>
+                  <li>{{ course }}</li>
+                </ul>
+              </span>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</section>
