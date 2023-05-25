@@ -1,0 +1,9 @@
+<section id="portfolio">
+  <div class="container">
+    <h2><strong>Portfolio</strong></h2>
+    <span class="bar-title"></span>
+    <div class="col-3 mt-2" *ngFor="let project of projects">
+      <app-portfolio-card [project]="project"></app-portfolio-card>
+    </div>
+  </div>
+</section>

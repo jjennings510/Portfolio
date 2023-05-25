@@ -12,6 +12,8 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { ExperienceComponent } from './experience/experience.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutComponent,
     SkillsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    PortfolioComponent,
+    PortfolioCardComponent
   ],
   imports: [
     BrowserModule,

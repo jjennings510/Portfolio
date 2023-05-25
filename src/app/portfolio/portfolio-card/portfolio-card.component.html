@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;" *ngIf="project">
+    <img class="card-img-top" src="{{project.images[0].src}}" alt="{{project.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{project.name}}</h5>
+      <p class="card-text">{{project.shortDescription}}</p>
+      <span><strong>Technologies</strong></span>
+      <p><small>{{project.technologies}}</small></p>
+      <div class="text-center">
+        <a href="{{project.sourceCodeLink}}" class="btn btn-primary">Source Code</a>
+      </div>
+    </div>
+  </div>
