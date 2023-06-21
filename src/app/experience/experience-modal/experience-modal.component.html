@@ -1,0 +1,64 @@
+<div *ngIf="work">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title pull-left">{{ work.position }}</h2>
+      <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="bsModalRef.hide()"
+      >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-6">
+          <h4>{{ work.employer }}</h4>
+        </div>
+        <div class="col-6">
+          <em class="float-end">{{ work.date }}</em>
+        </div>
+      </div>
+      <div class="row container">
+        <ul>
+          <li *ngFor="let detail of work.details">
+            <p>{{ detail }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="education">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title pull-left">{{ education.degree }}</h2>
+      <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="bsModalRef.hide()"
+      >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-6">
+          <h4>{{ education.school }}</h4>
+        </div>
+        <div class="col-6">
+          <em class="float-end">{{ education.date }}</em>
+        </div>
+      </div>
+      <div class="row container">
+        <ul>
+          <li *ngFor="let class of education.coursework">
+            <p>{{ class }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

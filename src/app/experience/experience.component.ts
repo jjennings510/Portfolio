@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { WorkExperience } from '../_models/workExperience';
+import { Education } from '../_models/education';
 
 @Component({
   selector: 'app-experience',
@@ -6,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent {
-  works: any = [
+  works: WorkExperience[] = [
     {
       position: 'Lead Software Engineer',
       employer: 'Wells Fargo',
@@ -18,8 +20,7 @@ export class ExperienceComponent {
         'Drove root cause analysis for critical issues, proposing workarounds to maintain business continuity',
         'Provided monthly incident trend reports to dev managers',
         'Created production tickets leading to code changes, raising transaction success rate from 96.6% to 99.97% YTD',
-      ],
-      displayDetails: false
+      ]
     },
     {
       position: 'RPA Developer',
@@ -29,8 +30,7 @@ export class ExperienceComponent {
         'Created Process Solution Design Document, Technical Design Document, and Test Case Plan',
         'Communicated with the clients to gather requirements and confirm process design criteria',
         'Mapped out process design by creating Process Design Documents and flowchart diagrams (Both As-Is and To-Be)',
-      ],
-      displayDetails: false
+      ]
     },
     {
       position: 'RPA Developer',
@@ -40,27 +40,24 @@ export class ExperienceComponent {
         'Designed numerous workflows for each part of the automation suite process',
         'Structured workflows within Robotic Enterprise Framework and added additional exception handling, logging, and validation capabilities',
         'Automated downloading of claim information and copying all files to a specified shared folder',
-      ],
-      displayDetails: false
+      ]
     },
   ];
-  educations: any = [
+  educations: Education[] = [
     {
       school: 'San Jose State University',
       location: 'San Jose, CA',
       degree: 'B.S. Computer Engineering',
-      date: 'Aug 2015 - May 2020',
+      date: 'May 2020',
       coursework: [
         'Data Structures and Algorithms',
         'Mobile Software Engineering',
         'Data Science',
         'Operating Systems',
         'Computer Architecture and Design',
-      ],
-      displayDetails: false
+      ]
     },
   ];
-  
 
   toggleDetails(work: any) {
     work.displayDetails = !work.displayDetails;

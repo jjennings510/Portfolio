@@ -8,9 +8,9 @@
         <div class="row" *ngFor="let language of skills.languages">
           <span>{{ language.name }}</span>
           <div class="mb-2">
-            <progressbar [value]="language.percent" [max]="100"
-              ><b class="text-end me-2">{{ language.percent }}%</b></progressbar
-            >
+            <progressbar [value]="language.percent" [max]="100">
+              <b class="text-end me-2">{{ language.percent }}%</b>
+            </progressbar>
           </div>
         </div>
       </div>
@@ -20,11 +20,9 @@
           <div class="row" *ngFor="let framework of skills.frameworks">
             <span>{{ framework.name }}</span>
             <div class="mb-2">
-              <progressbar [value]="framework.percent" [max]="100"
-                ><b class="text-end me-2"
-                  >{{ framework.percent }}%</b
-                ></progressbar
-              >
+              <progressbar [value]="framework.percent" [max]="100">
+                <b class="text-end me-2">{{ framework.percent }}%</b>
+              </progressbar>
             </div>
           </div>
         </div>
@@ -35,9 +33,9 @@
           <div class="row" *ngFor="let tool of skills.tools">
             <span>{{ tool.name }}</span>
             <div class="mb-2">
-              <progressbar [value]="tool.percent" [max]="100"
-                ><b class="text-end me-2">{{ tool.percent }}%</b></progressbar
-              >
+              <progressbar [value]="tool.percent" [max]="100">
+                <b class="text-end me-2">{{ tool.percent }}%</b>
+              </progressbar>
             </div>
           </div>
         </div>

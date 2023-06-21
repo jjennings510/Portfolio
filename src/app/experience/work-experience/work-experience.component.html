@@ -1,0 +1,14 @@
+<div *ngIf="work">
+  <div class="row">
+    <div class="col-xl-8 col-md-6 col-sm-12">
+      <h6>{{ work.position }}</h6>
+      <p class="fst-italic">{{ work.employer }}</p>
+    </div>
+    <div class="col-xl-4 col-md-6 col-sm-12">
+      <p class="text-md-end">{{ work.date }}</p>
+    </div>
+  </div>
+  <div class="mb-2">
+    <button class="btn btn-primary" (click)="openModal()">Details</button>
+  </div>
+</div>

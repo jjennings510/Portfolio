@@ -8,4 +8,5 @@ import { Project } from 'src/app/_models/project';
 })
 export class PortfolioCardComponent {
   @Input() project: Project | undefined;
+  
 }

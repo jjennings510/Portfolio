@@ -14,6 +14,10 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-card.component';
+import { WorkExperienceComponent } from './experience/work-experience/work-experience.component';
+import { ExperienceModalComponent } from './experience/experience-modal/experience-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { EducationComponent } from './experience/education/education.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-car
     SkillsComponent,
     ExperienceComponent,
     PortfolioComponent,
-    PortfolioCardComponent
+    PortfolioCardComponent,
+    WorkExperienceComponent,
+    ExperienceModalComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-car
     FontAwesomeModule,
     ProgressbarModule.forRoot(),
     CollapseModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
