@@ -18,6 +18,7 @@ import { WorkExperienceComponent } from './experience/work-experience/work-exper
 import { ExperienceModalComponent } from './experience/experience-modal/experience-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EducationComponent } from './experience/education/education.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { EducationComponent } from './experience/education/education.component';
     PortfolioCardComponent,
     WorkExperienceComponent,
     ExperienceModalComponent,
-    EducationComponent
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,8 @@ import { EducationComponent } from './experience/education/education.component';
     ProgressbarModule.forRoot(),
     CollapseModule.forRoot(),
     BrowserAnimationsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

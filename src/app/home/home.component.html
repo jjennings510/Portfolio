@@ -15,8 +15,37 @@
           />
         </a>
       </div>
-      <h1>Jacob Jennings</h1>
-      <p>Software Developer</p>
+      <h1 class="title">Jacob Jennings</h1>
+      <p class="caption">Software Developer</p>
+      <div class="mt-4">
+        <a href="#contact" class="btn btn-primary me-2">Contact Me</a>
+        <a href="#" class="btn btn-primary">View Resume</a>
+      </div>
     </div>
   </section>
 </div>
+<section>
+  <div class="container">
+    <div class="button-container d-flex justify-content-center">
+      <a
+        href="https://www.linkedin.com/in/jacob-jennings-a2755b16a/"
+        class="btn btn-default btn-round btn-lg btn-icon"
+        type="button"
+        target="_blank"
+        ngbTooltip="Connect on LinkedIn"
+        placement="top"
+      >
+        <fa-icon [icon]="linkedIn" size="lg"></fa-icon>
+      </a>
+      <a
+        href="https://github.com/jjennings510"
+        class="btn btn-default btn-round btn-lg btn-icon"
+        target="_blank"
+        ngbTooltip="Check out my GitHub"
+        placement="top"
+      >
+        <fa-icon [icon]="github" size="lg"></fa-icon>
+      </a>
+    </div>
+  </div>
+</section>

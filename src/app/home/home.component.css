@@ -1,20 +1,22 @@
 .page-header {
   height: 100vh;
-  max-height: 750px;
+  max-height: 600px;
   padding: 0;
   color: white;
   position: relative;
   background-position: center center;
   background-size: cover;
 }
+
 .page-header .header-background {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
   background-size: cover;
   background-position: top center;
   background-image: linear-gradient();
+  overflow: hidden;
 }
 
 .header-overlay {
@@ -26,7 +28,7 @@
   background: linear-gradient(
     to bottom,
     rgba(28, 17, 177, 0.7),
-    rgba(192, 183, 183, 0.3)
+    rgba(235, 232, 232, 0.534)
   );
 }
 
@@ -111,4 +113,43 @@
 .profile-image a:hover:before {
   -webkit-transform: none;
   transform: none;
+}
+
+.button-container {
+  margin-top: -25px;
+}
+
+.btn-icon {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  background-color: black;
+  margin-right: 10px;
+  margin-left: 10px;
+  z-index: 10;
+
+}
+
+.btn-icon:hover {
+  background-color: rgb(59, 59, 95);
+  
+}
+
+::ng-deep .bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #ffffff;
+}
+
+
+::ng-deep .tooltip-inner {
+  padding: 0.5rem 1rem;
+  min-width: 130px;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: inherit;
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
