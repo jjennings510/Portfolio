@@ -1,24 +1,34 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   isNavbarTransparent = true;
   activeSection: string = '';
+  showMenu = false;
+  navbarHeightThreshold = 600;
+  menuBars: any;
+
+  ngOnInit(): void {
+    this.menuBars = faBars;
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
-    let navbarHeightThreshold = 600;
-    if (window.scrollY >= navbarHeightThreshold) {
+    
+    if (window.scrollY >= this.navbarHeightThreshold) {
       this.isNavbarTransparent = false;
-    } else if (window.scrollY < navbarHeightThreshold) {
+    } else if (window.scrollY < this.navbarHeightThreshold) {
       this.isNavbarTransparent = true;
     }
-
     this.highlightActiveLink();
+    if (this.showMenu) {
+      this.isNavbarTransparent = false;
+    }
   }
 
   highlightActiveLink() {
@@ -49,5 +59,16 @@ export class NavbarComponent {
     this.activeSection = activeSection;
     console.log(scrollPosition)
     console.log(activeSection);
+  }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+    console.log(this.showMenu)
+    if (this.showMenu) {
+      this.isNavbarTransparent = false;
+    }
+    if (!this.showMenu && window.scrollY < this.navbarHeightThreshold) {
+      this.isNavbarTransparent = true;
+    }
   }
 }

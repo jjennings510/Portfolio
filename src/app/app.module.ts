@@ -1,3 +1,4 @@
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
