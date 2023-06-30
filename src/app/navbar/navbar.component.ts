@@ -6,7 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
   isNavbarTransparent = true;
   activeSection: string = '';
   showMenu = false;
@@ -19,7 +19,6 @@ export class NavbarComponent implements OnInit{
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
-    
     if (window.scrollY >= this.navbarHeightThreshold) {
       this.isNavbarTransparent = false;
     } else if (window.scrollY < this.navbarHeightThreshold) {
@@ -37,7 +36,8 @@ export class NavbarComponent implements OnInit{
       document.getElementById('about'),
       document.getElementById('skills'),
       document.getElementById('experience'),
-      document.getElementById('portfolio'),
+      document.getElementById('education'),
+      document.getElementById('project'),
       document.getElementById('contact'),
     ];
 
@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit{
 
     const scrollPosition = window.scrollY;
 
-    let activeSection = "";
+    let activeSection = '';
 
     for (let i = 0; i < sections.length; i++) {
       const section = sections[i];
@@ -57,13 +57,10 @@ export class NavbarComponent implements OnInit{
     }
 
     this.activeSection = activeSection;
-    console.log(scrollPosition)
-    console.log(activeSection);
   }
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
-    console.log(this.showMenu)
     if (this.showMenu) {
       this.isNavbarTransparent = false;
     }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import * as fa from '@fortawesome/free-solid-svg-icons';
+import { ProfileLoaderService } from '../_services/profile-loader.service';
 
 @Component({
   selector: 'app-about',
@@ -15,6 +16,9 @@ export class AboutComponent implements OnInit {
   email: any;
   age: any;
   degree: any;
+  model: any;
+
+  constructor(private profileLoader: ProfileLoaderService) {}
 
   ngOnInit(): void {
     this.linkedIn = faLinkedin;
@@ -24,5 +28,7 @@ export class AboutComponent implements OnInit {
     this.email = fa.faAt;
     this.age = fa.faCakeCandles;
     this.degree = fa.faGraduationCap;
+
+    this.model = this.profileLoader.getAbout();
   }
 }

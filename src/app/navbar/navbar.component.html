@@ -1,12 +1,12 @@
 <nav
   [ngClass]="{
     transparent: isNavbarTransparent,
-    'bg-primary shadow': !isNavbarTransparent
+    'bg-primary shadow-lg': !isNavbarTransparent
   }"
   class="navbar navbar-expand-md navbar-dark fixed-top"
 >
   <div class="container">
-    <a href="#" class="navbar-brand">Jacob's Portfolio</a>
+    <a href="#" class="navbar-brand">Jacob Jennings</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -61,13 +61,26 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#portfolio"
-            [ngClass]="{ active: activeSection === 'portfolio' }"
-            >Portfolio</a
+            href="#education"
+            [ngClass]="{ active: activeSection === 'education' }"
+            >Education</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link">Contact</a>
+          <a
+            class="nav-link"
+            href="#project"
+            [ngClass]="{ active: activeSection === 'project' }"
+            >project</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#contact"
+            [ngClass]="{ active: activeSection === 'contact' }"
+            >Contact</a
+          >
         </li>
       </ul>
     </div>

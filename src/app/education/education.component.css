@@ -1,0 +1,33 @@
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+.row {
+  background-color: #192352;
+    color: white;
+    border-radius: .25rem;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.row .col-md-8 {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.card-body.content {
+    background-color: white;
+    color: black;
+    margin: 0px;
+    overflow: hidden;
+}

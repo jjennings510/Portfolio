@@ -1,4 +1,4 @@
-<div class="card mb-4" *ngIf="project">
+<div class="card mb-4 shadow" *ngIf="project">
   <img
     class="card-img-top"
     src="{{ project.images[0].src }}"
@@ -12,7 +12,10 @@
       <small>{{ project.technologies }}</small>
     </p>
     <div class="text-center">
-      <a href="{{ project.sourceCodeLink }}" class="btn btn-primary" target="_blank"
+      <a
+        href="{{ project.sourceCodeLink }}"
+        class="btn btn-primary"
+        target="_blank"
         >Source Code</a
       >
     </div>

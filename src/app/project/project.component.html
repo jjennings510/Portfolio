@@ -1,0 +1,11 @@
+<section id="project">
+  <div class="container">
+    <h2 class="title"><strong>Projects</strong></h2>
+    <span class="bar-title"></span>
+    <div class="card-deck row row-cols-lg-4 row-cols-sm-2 justify-content-center">
+      <div *ngFor="let project of projects">
+        <app-project-card [project]="project"></app-project-card>
+      </div>
+    </div>
+  </div>
+</section>

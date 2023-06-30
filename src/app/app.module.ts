@@ -1,4 +1,3 @@
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,13 +12,17 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { ExperienceComponent } from './experience/experience.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-card.component';
-import { WorkExperienceComponent } from './experience/work-experience/work-experience.component';
-import { ExperienceModalComponent } from './experience/experience-modal/experience-modal.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectCardComponent } from './project/project-card/project-card.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { EducationComponent } from './experience/education/education.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { TimelineModule } from 'primeng/timeline';
+import { CardModule } from 'primeng/card';
+import { EducationComponent } from './education/education.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +32,11 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     AboutComponent,
     SkillsComponent,
     ExperienceComponent,
-    PortfolioComponent,
-    PortfolioCardComponent,
-    WorkExperienceComponent,
-    ExperienceModalComponent,
+    ProjectComponent,
+    ProjectCardComponent,
     EducationComponent,
+    ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,11 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     CollapseModule.forRoot(),
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    TimelineModule,
+    CardModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

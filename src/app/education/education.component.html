@@ -1,0 +1,28 @@
+<section id="education" *ngIf="education">
+  <div class="container">
+    <h2 class="title"><strong>Education</strong></h2>
+    <div class="card shadow-lg" *ngFor="let edu of education">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <div class="card-body text-center">
+            <h4>{{ edu.degree }}</h4>
+            <p>Graduated: {{ edu.date }}</p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body content">
+            <h5>
+              {{ edu.school }}
+              <span class="text-muted h6"> - {{ edu.location }}</span>
+            </h5>
+            <p>GPA: {{ edu.gpa }}</p>
+            <p class="text-center">Relevant Coursework</p>
+            <ul class="card-columns">
+              <li *ngFor="let course of edu.coursework">{{ course }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
