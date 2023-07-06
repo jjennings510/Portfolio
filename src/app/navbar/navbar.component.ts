@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
       document.getElementById('skills'),
       document.getElementById('experience'),
       document.getElementById('education'),
-      document.getElementById('project'),
+      document.getElementById('projects'),
       document.getElementById('contact'),
     ];
 

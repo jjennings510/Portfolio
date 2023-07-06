@@ -1,12 +1,14 @@
-<div class="card mb-4 shadow" *ngIf="project">
+<div class="card mb-4 shadow h-100" *ngIf="project">
   <img
-    class="card-img-top"
+    class="card-img-top shadow"
     src="{{ project.images[0].src }}"
     alt="{{ project.name }}"
   />
   <div class="card-body">
-    <h5 class="card-title">{{ project.name }}</h5>
-    <p class="card-text">{{ project.shortDescription }}</p>
+    <h5 class="card-title">
+      <strong>{{ project.name }}</strong>
+    </h5>
+    <p class="card-text h-25"><small>{{ project.shortDescription }}</small></p>
     <span><strong class="card-subtitle">Technologies</strong></span>
     <p>
       <small>{{ project.technologies }}</small>

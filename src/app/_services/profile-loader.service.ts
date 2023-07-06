@@ -127,31 +127,35 @@ export class ProfileLoaderService {
     {
       name: 'Dating App',
       shortDescription:
-        'This application is designed with functionality that would make virtual shopping much simpler.',
+        'Upload photos, match users, and have live conversations with people you meet online.',
       longDescription:
-        'This application is designed with functionality that would make virtual shopping much simpler! Customers can sign up for an account, place orders, view their order history, and specific location inventory. It also comes with an additional interface for managing your business. Managers can view and replenish location inventory, add new products, and view the order history of specific locations. This application used Entity Framework Core to connect to a PostgreSQL database, ASP.NET Core API to create a RESTful API, and HTML, CSS, BootstrapJS, and Javascript to create the front end.',
+        'This application is designed to help users find their match. Upload photos, create your profile and have live conversations with other users.',
       technologies:
-        'ASP.NET Core, Entity Framework Core, ASP.NET MVC, Postgre SQL',
-      sourceCodeLink: 'https://github.com/jjennings510/GGsStoreApp',
+        'ASP.NET Core, Entity Framework Core, SignalR, Angular, MySQL',
+      sourceCodeLink: 'https://github.com/jjennings510/DatingApp ',
       images: [
         {
-          title: 'App home',
-          src: 'assets/images/GGs/inventory.png',
+          title: 'Matches',
+          src: 'assets/images/DatingApp/matches.png',
         },
         {
-          title: 'Login',
-          src: 'assets/images/GGs/login.png',
+          title: 'Messages',
+          src: 'assets/images/DatingApp/messages.png',
         },
         {
-          title: 'App home',
-          src: 'assets/images/GGs/inventory.png',
+          title: 'Edit Photos',
+          src: 'assets/images/DatingApp/editPhotos.png',
+        },
+        {
+          title: 'Inbox',
+          src: 'assets/images/DatingApp/inbox.png',
         },
       ],
     },
     {
       name: 'Portfolio Website',
       shortDescription:
-        'This application is designed with functionality that would make virtual shopping much simpler.',
+        'The work behind the creation of this website created with Angular15.',
       longDescription:
         'This application is designed with functionality that would make virtual shopping much simpler! Customers can sign up for an account, place orders, view their order history, and specific location inventory. It also comes with an additional interface for managing your business. Managers can view and replenish location inventory, add new products, and view the order history of specific locations. This application used Entity Framework Core to connect to a PostgreSQL database, ASP.NET Core API to create a RESTful API, and HTML, CSS, BootstrapJS, and Javascript to create the front end.',
       technologies:
@@ -160,15 +164,15 @@ export class ProfileLoaderService {
       images: [
         {
           title: 'App home',
-          src: 'assets/images/GGs/inventory.png',
+          src: 'assets/images/Portfolio/home.png',
         },
         {
           title: 'Login',
-          src: 'assets/images/GGs/login.png',
+          src: 'assets/images/Portfolio/skills.png',
         },
         {
           title: 'App home',
-          src: 'assets/images/GGs/inventory.png',
+          src: 'assets/images/Portfolio/smallScreen.png',
         },
       ],
     },
