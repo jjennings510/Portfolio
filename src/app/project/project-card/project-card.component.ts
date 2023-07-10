@@ -19,6 +19,5 @@ export class ProjectCardComponent implements OnInit{
 
   openModal(content: any) {
     this.modalService.open(content, { size: 'lg', centered: true });
-    console.log(content);
   }
 }

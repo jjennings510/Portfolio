@@ -51,16 +51,37 @@ fa-icon {
   text-align: center;
 }
 
-.carousel-item img{
-  height: 750px;
-  object-fit: contain;
-}
-
-.modal-body {
+.modal-header, .modal-body {
   background-color: grey;
+  border-bottom: none;
+}
+.modal-close,
+.modal-close:focus,
+.modal-close:active {
+    outline: none;
+    box-shadow: none;
+    border: 0;
 }
 
 p {
   height: 4em;
   margin: 10px 0px;
+}
+
+.img-wrapper {
+  text-align: center;
+}
+
+img {
+  height: 750px;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 480px){
+  img {
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+  }
 }

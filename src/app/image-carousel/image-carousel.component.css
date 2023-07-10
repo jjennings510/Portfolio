@@ -1,12 +1,8 @@
 .img-wrapper {
     text-align: center;
-}
-
-img {
+  }
+  
+  img {
     height: 500px;
     object-fit: contain;
-}
-
-.carousel:hover .carousel-control-next-icon {
-    color: black;
-}
+  }
