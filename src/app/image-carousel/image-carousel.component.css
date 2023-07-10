@@ -1,4 +1,8 @@
-.carousel-item img {
+.img-wrapper {
+    text-align: center;
+}
+
+img {
     height: 500px;
     object-fit: contain;
 }
