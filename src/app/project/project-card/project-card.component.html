@@ -1,16 +1,24 @@
 <div class="card mb-4 shadow h-100" *ngIf="project">
-  <img
-    class="card-img-top shadow"
-    src="{{ project.images[0].src }}"
-    alt="{{ project.name }}"
-  />
+  <div class="container">
+    <img
+      class="card-img-top shadow"
+      src="{{ project.images[0].src }}"
+      alt="{{ project.name }}"
+    />
+    <div class="overlay" (click)="openModal(content)">
+      <fa-icon [icon]="zoomIcon"></fa-icon>
+    </div>
+  </div>
+
   <div class="card-body">
     <h5 class="card-title">
       <strong>{{ project.name }}</strong>
     </h5>
-    <p class="card-text h-25"><small>{{ project.shortDescription }}</small></p>
-    <span><strong class="card-subtitle">Technologies</strong></span>
-    <p>
+    <p class="card-text h-25">
+      <small>{{ project.shortDescription }}</small>
+    </p>
+    <h6><strong class="card-subtitle">Technologies</strong></h6>
+    <p class="technologies">
       <small>{{ project.technologies }}</small>
     </p>
     <div class="text-center">
@@ -23,3 +31,37 @@
     </div>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let image of project.images; let i = index"
+          [ngClass]="{ active: i == 0 }"
+        >
+          <img src="{{ image.src }}" alt="" class="d-block w-100" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</ng-template>

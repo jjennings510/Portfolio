@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -14,7 +14,6 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectComponent } from './project/project.component';
 import { ProjectCardComponent } from './project/project-card/project-card.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
@@ -23,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
     EducationComponent,
     ContactComponent,
     FooterComponent,
+    ImageCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -45,12 +46,13 @@ import { FooterComponent } from './footer/footer.component';
     ProgressbarModule.forRoot(),
     CollapseModule.forRoot(),
     BrowserAnimationsModule,
-    ModalModule.forRoot(),
     TooltipModule.forRoot(),
     TimelineModule,
     CardModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbCarouselModule,
+    NgbModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

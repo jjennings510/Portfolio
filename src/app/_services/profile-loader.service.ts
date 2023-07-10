@@ -17,9 +17,9 @@ export class ProfileLoaderService {
     email: 'jacobjennings510@gmail.com',
     address: 'Hayward, CA',
     dateOfBirth: 'May 19, 1997',
-    degree: 'B.S. Computer Engineering'
+    degree: 'B.S. Computer Engineering',
   };
-  
+
   private skills: any = {
     languages: [
       { name: 'Java', percent: 70 },
@@ -39,11 +39,9 @@ export class ProfileLoaderService {
       { name: 'MySQL', percent: 75 },
       { name: 'PostgreSQL', percent: 75 },
       { name: 'Git', percent: 90 },
-      { name: 'UiPath', percent: 90},
-      { name: 'Blue Prism', percent: 90}
-    
-  ]
-    
+      { name: 'UiPath', percent: 90 },
+      { name: 'Blue Prism', percent: 90 },
+    ],
   };
 
   private work: any = [
@@ -95,7 +93,7 @@ export class ProfileLoaderService {
         'Operating Systems',
         'Computer Architecture and Design',
       ],
-      gpa: '3.45'
+      gpa: '3.45',
     },
   ];
 
@@ -119,8 +117,16 @@ export class ProfileLoaderService {
           src: 'assets/images/GGs/login.png',
         },
         {
-          title: 'App home',
-          src: 'assets/images/GGs/inventory.png',
+          title: 'Details Page',
+          src: 'assets/images/GGs/details.png',
+        },
+        {
+          title: 'Cart',
+          src: 'assets/images/GGs/cart.png',
+        },
+        {
+          title: 'Order History',
+          src: 'assets/images/GGs/orderhistory.png',
         },
       ],
     },
@@ -158,9 +164,8 @@ export class ProfileLoaderService {
         'The work behind the creation of this website created with Angular15.',
       longDescription:
         'This application is designed with functionality that would make virtual shopping much simpler! Customers can sign up for an account, place orders, view their order history, and specific location inventory. It also comes with an additional interface for managing your business. Managers can view and replenish location inventory, add new products, and view the order history of specific locations. This application used Entity Framework Core to connect to a PostgreSQL database, ASP.NET Core API to create a RESTful API, and HTML, CSS, BootstrapJS, and Javascript to create the front end.',
-      technologies:
-        'ASP.NET Core, Entity Framework Core, ASP.NET MVC, Postgre SQL',
-      sourceCodeLink: 'https://github.com/jjennings510/GGsStoreApp',
+      technologies: 'Angular, Bootstrap, NgBootstrap, AOS',
+      sourceCodeLink: 'https://github.com/jjennings510/jjennings510.github.io',
       images: [
         {
           title: 'App home',
@@ -177,6 +182,15 @@ export class ProfileLoaderService {
       ],
     },
   ];
+
+  private images: string[] = [
+    "assets/images/random/yellowstone.JPEG",
+    "assets/images/random/yellowstone2.jpg",
+    "assets/images/random/yellowstone3.jpg",
+    "assets/images/random/giants.jpg",
+    "assets/images/random/seattle.JPG",
+    "assets/images/random/christmas.jpg",
+  ]
 
   getAbout(): any {
     return this.about;
@@ -196,5 +210,9 @@ export class ProfileLoaderService {
 
   getProjects(): any {
     return this.projects;
+  }
+
+  getImages(): string[] {
+    return this.images;
   }
 }

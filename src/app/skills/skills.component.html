@@ -1,11 +1,11 @@
 <section id="skills">
   <div class="container">
     <h2 class="title"><strong>Skills</strong></h2>
-    <div class="card shadow-lg">
+    <div class="card shadow-lg" data-aos="fade-left" data-aos-duration="750">
       <div class="card-body">
         <div class="row mt-2">
           <div class="col-lg-4">
-            <h5 class="mb-4 text-center"><strong>Languages</strong></h5>
+            <h5 class="text-center"><strong>Languages</strong></h5>
             <div class="row" *ngFor="let language of skills.languages">
               <span>{{ language.name }}</span>
               <div class="mb-2">
@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <h5 class="mb-4 text-center">
+            <h5 class="text-center">
               <strong>Frameworks and Libraries</strong>
             </h5>
             <div>
@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <h5 class="mb-4 text-center"><strong>Tools</strong></h5>
+            <h5 class="text-center"><strong>Tools</strong></h5>
             <div>
               <div class="row" *ngFor="let tool of skills.tools">
                 <span>{{ tool.name }}</span>
