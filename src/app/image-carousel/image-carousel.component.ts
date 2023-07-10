@@ -13,7 +13,6 @@ export class ImageCarouselComponent implements OnInit{
 
   ngOnInit(): void {
     this.images = this.profileLoader.getImages();
-    console.log(this.images);
   }
   
 }

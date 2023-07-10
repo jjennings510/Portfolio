@@ -67,5 +67,6 @@ export class NavbarComponent implements OnInit {
     if (!this.showMenu && window.scrollY < this.navbarHeightThreshold) {
       this.isNavbarTransparent = true;
     }
+    console.log(this.showMenu)
   }
 }
