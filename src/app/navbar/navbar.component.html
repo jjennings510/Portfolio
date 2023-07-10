@@ -6,13 +6,13 @@
   class="navbar navbar-expand-md navbar-dark fixed-top"
 >
   <div class="container">
-    <a href="#" class="navbar-brand">Jacob Jennings</a>
+    <a [routerLink]="[]" [fragment]="'home'" class="navbar-brand"
+      >Jacob Jennings</a
+    >
     <button
       class="navbar-toggler d-flex d-md-none flex-column justify-content-around"
       [ngClass]="{ show: showMenu }"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navigation"
       aria-controls="navigation"
       aria-expanded="false"
       aria-lavel="Toggle navigation"
@@ -25,63 +25,76 @@
     <div
       class="collapse navbar-collapse"
       id="navigation"
-      [ngClass]="{ show: showMenu }"
+      [ngbCollapse]="!showMenu"
     >
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a
             class="nav-link"
-            id="home"
-            href="#"
+            [routerLink]="[]"
+            [fragment]="'home'"
             [ngClass]="{ active: activeSection === 'home' }"
+            (click)="showMenu = false"
             >Home</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#about"
+            [routerLink]="[]"
+            [fragment]="'about'"
             [ngClass]="{ active: activeSection === 'about' }"
+            (click)="showMenu = false"
             >About</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#skills"
+            [routerLink]="[]"
+            [fragment]="'skills'"
             [ngClass]="{ active: activeSection === 'skills' }"
+            (click)="showMenu = false"
             >Skills</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#experience"
+            [routerLink]="[]"
+            [fragment]="'experience'"
             [ngClass]="{ active: activeSection === 'experience' }"
+            (click)="showMenu = false"
             >Experience</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#education"
+            [routerLink]="[]"
+            [fragment]="'education'"
             [ngClass]="{ active: activeSection === 'education' }"
+            (click)="showMenu = false"
             >Education</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#projects"
+            [routerLink]="[]"
+            [fragment]="'projects'"
             [ngClass]="{ active: activeSection === 'projects' }"
+            (click)="showMenu = false"
             >Projects</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#contact"
+            [routerLink]="[]"
+            [fragment]="'contact'"
             [ngClass]="{ active: activeSection === 'contact' }"
+            (click)="showMenu = false"
             >Contact</a
           >
         </li>

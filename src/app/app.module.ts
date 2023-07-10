@@ -1,12 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NgbCarouselModule, NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbCarouselModule,
+  NgbModalModule,
+  NgbModule,
+} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsComponent } from './skills/skills.component';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { ExperienceComponent } from './experience/experience.component';
@@ -23,6 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -37,12 +42,11 @@ import { ImageCarouselComponent } from './image-carousel/image-carousel.componen
     EducationComponent,
     ContactComponent,
     FooterComponent,
-    ImageCarouselComponent
+    ImageCarouselComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    FontAwesomeModule,
     ProgressbarModule.forRoot(),
     CollapseModule.forRoot(),
     BrowserAnimationsModule,
@@ -52,9 +56,15 @@ import { ImageCarouselComponent } from './image-carousel/image-carousel.componen
     ReactiveFormsModule,
     HttpClientModule,
     NgbCarouselModule,
-    NgbModalModule
+    NgbModalModule,
+    FontAwesomeModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent }], 
+      {
+        anchorScrolling: 'enabled',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
